@@ -1,0 +1,10 @@
+<p>Chip-search </p>
+<ul class="selectedItems">
+    <li *ngFor="let item of selectedList; let i = index" style="float:left;border:1px solid #333;"> <button class="remove" (click)="removeItem(i,item)">x</button> {{item}}</li>
+</ul>
+<div style="float:left;">
+<input type="text" [(ngModel)]="myItem" class="search" (keydown.backspace)="deleteItem($event,selectedList[selectedList.length-1],selectedList.length-1)">
+<ul class="filterList">
+    <li *ngFor="let itm of list | filter : myItem;let i = index" (click)="appendToList(itm,i)"> {{itm}} </li>
+</ul>
+</div>
