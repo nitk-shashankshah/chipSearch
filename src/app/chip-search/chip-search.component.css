@@ -42,9 +42,8 @@ border-bottom:1px solid blue;
 ul.selectedItems li{
     padding:5px;
     background:#ccc;
-    border:0px solid #999;
     border-radius: 50px 50px 50px 50px;
-
+    float:left;
 }
 .remove{
     background:none;
