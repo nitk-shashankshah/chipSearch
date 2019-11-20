@@ -20,10 +20,12 @@ export class ChipSearchComponent implements OnInit {
     this.list = ["John", "Allen", "Gracy", "Nicole"]
   }
   deleteItem(event:any,a,b){
+    if (this.myItem==""){
     if (!this.lastSelected)
       this.lastSelected =true;
     else
       this.removeItem(b,a);
+    }
   }
   appendToList(itm,i){
     if (this.selectedList.indexOf(itm)<0){
